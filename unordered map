@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+#include<unordered_map>
+using namespace std;
+int main() {
+    unordered_map<string, int> umap;
+	umap["a"]=44;
+	umap["b"]=45;
+	umap["c"]=46;
+	for(auto itr= umap.begin(); itr!=umap.end(); itr++){
+		cout<<itr->first<<" "<<itr->second<<endl;
+	}
+	string key = "a";
+	if(umap.find(key) != umap.end()){
+		cout<<"key found"<<endl;
+		auto temp = umap.find(key);
+		cout<<"key is: "<<temp->first<<endl;
+		cout<<"value is: "<<temp->second<<endl;
+	}
+	else{
+		cout<<"key not found"<<endl;
+	}
+	umap.insert(make_pair("d", 47));
+	 key = "b";
+	umap.erase(key);
+	for(auto itr = umap.begin(); itr!=umap.end(); itr++){
+		cout<<itr->first<<" "<<itr->second<<endl;
+	}
+	cout<<umap.size()<<endl;
+    return 0;
+}

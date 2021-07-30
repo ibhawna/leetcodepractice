@@ -26,5 +26,15 @@ int main() {
 		cout<<itr->first<<" "<<itr->second<<endl;
 	}
 	cout<<umap.size()<<endl;
+	
+	// array unordered_map couting frequency of arrays elements
+	int arr[]={2,4,5,6,7,8,1,2,2,4,5,6,4,7,1,3};
+	unordered_map<int, int> umaparr;
+	for(int i=0; i<15; i++){
+		int key = arr[i];
+		umaparr[key]++; //
+	}
+    for(auto itr = umaparr.begin(); itr!=umaparr.end(); itr++)
+		cout<<itr->first<<" "<<itr->second<<endl;
     return 0;
 }

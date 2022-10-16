@@ -1,1 +1,1 @@
-# leetcodepractice
+# Daily Leetcode practice

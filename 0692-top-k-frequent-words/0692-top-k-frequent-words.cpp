@@ -1,11 +1,17 @@
 struct comp {
-    bool operator()(pair<int, string> &str1, pair<int, string> &str2) {
-        if(str1.first < str2.first)
+    bool operator()(pair<int, string> &a, pair<int, string> &b) {
+        if(a.first < b.first){
             return true;
-        if(str1.first > str2.first)
+        }
+            
+        if(a.first > b.first){
             return false;
-        if(str1.second.compare(str2.second) > 0)
+        }
+            
+        if(a.second.compare(b.second) > 0){
             return true;
+        }
+        
         return false;
     }
 };
